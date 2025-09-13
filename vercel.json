@@ -5,9 +5,9 @@
   ],
   "builds": [
     {
-      "src": "client/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": { "distDir": "dist" }
     },
     {
       "src": "server/server.js",
