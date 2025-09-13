@@ -5,9 +5,9 @@
   ],
   "builds": [
     {
-      "src": "client/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "client/dist" }
+      "config": { "distDir": "dist" }
     },
     {
       "src": "server/server.js",
@@ -25,6 +25,5 @@
     }
   ],
   "installCommand": "npm install --prefix client && npm install --prefix server",
-  "buildCommand": "npm run build --prefix client",
-  "root": "."
+  "buildCommand": "npm run build --prefix client"
 }
