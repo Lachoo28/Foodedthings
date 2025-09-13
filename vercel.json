@@ -11,8 +11,7 @@
     },
     {
       "src": "server/server.js",
-      "use": "@vercel/node",
-      "root": "server"
+      "use": "@vercel/node"
     }
   ],
   "installCommand": "npm install",
