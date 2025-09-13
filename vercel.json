@@ -1,19 +1,12 @@
 {
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/server/server.js" },
-    { "source": "/(.*)", "destination": "/client/$1" }
-  ],
-  "builds": [
+  "projects": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "name": "client",
+      "root": "client/"
     },
     {
-      "src": "server/server.js",
-      "use": "@vercel/node"
+      "name": "server",
+      "root": "server/"
     }
-  ],
-  "installCommand": "npm install",
-  "buildCommand": "npm run build"
+  ]
 }
