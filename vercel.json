@@ -7,13 +7,13 @@
     {
       "src": "client/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "client/build" },
-      "installCommand": "npm install",
-      "buildCommand": "npm run build"
+      "config": { "distDir": "client/build" }
     },
     {
       "src": "server/server.js",
       "use": "@vercel/node"
     }
-  ]
+  ],
+  "installCommand": "npm install",
+  "buildCommand": "cd client && npm install && npm run build"
 }
