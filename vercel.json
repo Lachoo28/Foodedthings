@@ -15,6 +15,6 @@
     }
   ],
 
-  "installCommand": "npm install --prefix client && npm install --prefix server",
-  "buildCommand": "npm run build --prefix client"
+ "installCommand": "npm install --prefix ./client && npm install --prefix ./server",
+  "buildCommand": "npm run build --prefix ./client"
 }
