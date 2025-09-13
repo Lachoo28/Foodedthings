@@ -14,6 +14,6 @@
       "use": "@vercel/node"
     }
   ],
-  "installCommand": "npm install --prefix client",
-  "buildCommand": "npm run build --prefix client"
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
 }
