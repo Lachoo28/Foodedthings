@@ -1,20 +1,18 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/server/server.js" },
-    { "source": "/(.*)", "destination": "/client/$1" }
+    { "source": "/api/(.*)", "destination": "/server/server.js" }
   ],
   "builds": [
     {
       "src": "client/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "client/dist" }
+      "config": { "distDir": "dist" }
     },
     {
       "src": "server/server.js",
       "use": "@vercel/node"
     }
   ],
-
- "installCommand": "npm install --prefix ./client && npm install --prefix ./server",
+  "installCommand": "npm install --prefix ./client && npm install --prefix ./server",
   "buildCommand": "npm run build --prefix ./client"
 }
