@@ -5,15 +5,9 @@
   ],
   "builds": [
     {
-      "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "client/build" }
-    },
-    {
       "src": "server/server.js",
       "use": "@vercel/node"
     }
   ],
-  "installCommand": "cd $(git rev-parse --show-toplevel) && npm install && npm --prefix client install",
-  "buildCommand": "cd $(git rev-parse --show-toplevel) && npm --prefix client run build"
+  "installCommand": "npm install"
 }
