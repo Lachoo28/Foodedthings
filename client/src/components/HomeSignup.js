@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const HomeSignup = () => {
   const [homeName, setHomeName] = useState('');
@@ -69,15 +70,9 @@ const HomeSignup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-lightBackground">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mt-16">
-        <button
-          onClick={handleGoBack}
-          className="mb-4 text-gray-600 hover:text-gray-800 flex items-center"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-          </svg>
-          Back
-        </button>
+        <Link to="/" className="absolute top-4 left-4 text-primaryGreen hover:text-green-700">
+          <FaArrowLeft className="h-6 w-6" />
+        </Link>
         <h2 className="text-3xl font-bold text-primaryGreen text-center mb-6">Register Your Child Care Home</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
