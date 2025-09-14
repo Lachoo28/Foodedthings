@@ -353,12 +353,23 @@ function App() {
     }
   };
 
-  // Check if it's an admin, donor, or home route to conditionally render header
-  const isAdminOrDonorOrHomeRoute = location.pathname.startsWith('/admin') || location.pathname.startsWith('/donor-dashboard') || location.pathname.startsWith('/home-dashboard');
+  // Check if it's an admin, donor, or home route, or a login/signup page to conditionally render header
+  const hideHeaderRoutes = [
+    '/admin',
+    '/donor-dashboard',
+    '/home-dashboard',
+    '/login',
+    '/signup',
+    '/donor-login',
+    '/donor-signup',
+    '/home-login',
+    '/home-signup',
+  ];
+  const shouldHideHeader = hideHeaderRoutes.some(route => location.pathname.startsWith(route));
 
   return (
     <div className="App">
-      {!isAdminOrDonorOrHomeRoute && ( // Conditionally render header
+      {!shouldHideHeader && ( // Conditionally render header
         <header className="bg-white shadow-md fixed top-0 w-full z-50">
           <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
             <div className="text-2xl font-bold text-primaryGreen">FoodShare</div>
