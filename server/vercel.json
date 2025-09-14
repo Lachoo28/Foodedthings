@@ -1,13 +1,13 @@
 {
-  
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/server/server.js" }
+  ],
   "builds": [
     {
       "src": "./server.js",
       "use": "@vercel/node"
     }
-  ],
-  "routes": [
-    { "source": "/(.*)", "destination": "/" }
   ],
   "installCommand": "npm install"
 }
