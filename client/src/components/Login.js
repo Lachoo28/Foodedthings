@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -25,6 +26,9 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-lightBackground">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mt-16">
+        <Link to="/" className="absolute top-4 left-4 text-primaryGreen hover:text-green-700">
+          <FaArrowLeft className="h-6 w-6" />
+        </Link>
         <h2 className="text-3xl font-bold text-primaryGreen text-center mb-6">Admin Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
