@@ -1,6 +1,6 @@
 {
-  "routes": [
-    { "source": "/api/(.*)", "destination": "/server/server.js" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/server/server.js" }
   ],
   "builds": [
     {
