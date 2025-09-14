@@ -1,5 +1,5 @@
 {
-  "rewrites": [
+  "routes": [
     { "source": "/api/(.*)", "destination": "/server/server.js" }
   ],
   "builds": [
