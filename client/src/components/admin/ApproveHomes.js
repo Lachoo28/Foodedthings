@@ -77,7 +77,7 @@ const ApproveHomes = () => {
         <h2 className="text-3xl font-bold text-gray-800">Approve Homes</h2>
         <button
           onClick={() => navigate('/admin/create-home')}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
+          className="bg-primaryGreen text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
         >
           Create Home
         </button>
